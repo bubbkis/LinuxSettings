@@ -7,6 +7,9 @@ export LANG=ja_JP.UTF-8
 export XDG_CONFIG_HOME=$HOME/.config
 export XDG_CACHE_HOME=$HOME/.cache
 
+alias hilite='/usr/bin/src-hilite-lesspipe.sh'
+alias less='less -R'
+
 if [ -d $HOME/.anyenv ] ; then
     export PATH="$HOME/.anyenv/bin:$PATH"
     eval "$(anyenv init -)"
@@ -49,5 +52,9 @@ texc (){
     echo "-------- compile END --------"
 }
 
-alias hilite='/usr/bin/src-hilite-lesspipe.sh'
-alias less='less -R'
+# Example
+# chmod-r /path/to/dir d 755
+# chmod-r /path/to/dir f 644
+function chmod-r(){
+  find $1 -type $2 -exec chmod $3 {} +
+}
