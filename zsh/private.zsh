@@ -7,6 +7,8 @@ export PATH=~/.local/bin:$PATH
 export LANG=ja_JP.UTF-8
 export XDG_CONFIG_HOME=$HOME/.config
 export XDG_CACHE_HOME=$HOME/.cache
+export LD_LIBRARY_PATH=$HOME/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib
+export RLS_ROOT=$HOME/Develop/lang_server/rls
 
 alias hilite='/usr/bin/src-hilite-lesspipe.sh'
 alias less='less -R'
