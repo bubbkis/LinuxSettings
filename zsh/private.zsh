@@ -24,6 +24,7 @@ if [ -d $HOME/.anyenv ] ; then
 fi
 eval "$(pyenv virtualenv-init -)"
 eval "$(pipenv --completion)"
+eval "$(goenv init -)"
 
 setopt print_eight_bit
 source  ~/powerlevel9k/powerlevel9k.zsh-theme
