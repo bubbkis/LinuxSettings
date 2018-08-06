@@ -15,6 +15,7 @@ export PIPENV_VENV_IN_PROJECT=true
 
 alias hilite='/usr/bin/src-hilite-lesspipe.sh'
 alias less='less -R'
+alias lg='lazygit'
 
 if [ -d $HOME/.anyenv ] ; then
     export PATH="$HOME/.anyenv/bin:$PATH"
