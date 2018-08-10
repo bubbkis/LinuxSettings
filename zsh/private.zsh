@@ -1,17 +1,22 @@
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+export LANG=ja_JP.UTF-8
 export TERM=xterm-256color
 export PATH=/usr/local/bin:$PATH
 export PATH=/usr/local/sbin:$PATH
 export PATH=~/.local/bin:$PATH
-export PATH=~/.cargo/bin:$PATH
-export PATH=~/go/bin:$PATH
-export LANG=ja_JP.UTF-8
 export XDG_CONFIG_HOME=$HOME/.config
 export XDG_CACHE_HOME=$HOME/.cache
+export PIPENV_VENV_IN_PROJECT=true
+
+# Go
+export PATH=~/go/bin:$PATH
+
+# Rust
+export PATH=~/.cargo/bin:$PATH
 export LD_LIBRARY_PATH=$HOME/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib
 export RLS_ROOT=$HOME/Develop/lang_server/rls
-export PIPENV_VENV_IN_PROJECT=true
+
 
 alias hilite='/usr/bin/src-hilite-lesspipe.sh'
 alias less='less -R'
