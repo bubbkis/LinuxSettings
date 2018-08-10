@@ -4,16 +4,16 @@ export LANG=ja_JP.UTF-8
 export TERM=xterm-256color
 export PATH=/usr/local/bin:$PATH
 export PATH=/usr/local/sbin:$PATH
-export PATH=~/.local/bin:$PATH
+export PATH=$HOME/.local/bin:$PATH
 export XDG_CONFIG_HOME=$HOME/.config
 export XDG_CACHE_HOME=$HOME/.cache
 export PIPENV_VENV_IN_PROJECT=true
 
 # Go
-export PATH=~/go/bin:$PATH
+export PATH=$HOME/go/bin:$PATH
 
 # Rust
-export PATH=~/.cargo/bin:$PATH
+export PATH=$HOME/.cargo/bin:$PATH
 export LD_LIBRARY_PATH=$HOME/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib
 export RLS_ROOT=$HOME/Develop/lang_server/rls
 
@@ -36,7 +36,7 @@ eval "$(pipenv --completion)"
 eval "$(goenv init -)"
 
 setopt print_eight_bit
-source  ~/powerlevel9k/powerlevel9k.zsh-theme
+source  $HOME/powerlevel9k/powerlevel9k.zsh-theme
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(time context dir vcs)
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status rbenv)
 POWERLEVEL9K_STATUS_VERBOSE=false
