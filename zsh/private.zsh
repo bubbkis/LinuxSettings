@@ -1,5 +1,6 @@
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source <(kompose completion zsh)
 export LANG=ja_JP.UTF-8
 export TERM=xterm-256color
 export PATH=/usr/local/bin:$PATH
