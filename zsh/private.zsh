@@ -22,11 +22,20 @@ export RLS_ROOT=$HOME/Develop/lang_server/rls
 alias hilite='/usr/bin/src-hilite-lesspipe.sh'
 alias less='less -R'
 alias lg='lazygit'
+alias lzd='lazydocker'
+# ディレクトリ名でしぼってcd
+alias pcd='cd "$(find . -type d | peco)"'
+# ブランチ名で絞ってgit checkout
+alias pgco='git branch --sort=-authordate | cut -b 3- | perl -pe '\''s#^remotes/origin/###'\'' | perl -nlE '\''say if !$c{$_}++'\'' | grep -v -- "->" | peco | xargs git checkout'
+# ブランチ名で絞ってgit branch -d
+alias pgbd='git br | peco | xargs git br -d'
+# ブランチ名で絞ってgit rebase
+alias pgrb='git br | peco | xargs git rebase'
 
 if [ -d $HOME/.anyenv ] ; then
     export PATH="$HOME/.anyenv/bin:$PATH"
     eval "$(anyenv init -)"
-    # tmux�Ή�
+    # tmux‘Î‰ž
     for D in `\ls $HOME/.anyenv/envs`
     do
         export PATH="$HOME/.anyenv/envs/$D/shims:$PATH"

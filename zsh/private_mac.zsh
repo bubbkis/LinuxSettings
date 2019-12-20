@@ -20,10 +20,19 @@ fpath=(/usr/local/share/zsh-completions $fpath)
 #export RLS_ROOT=$HOME/Develop/lang_server/rls
 
 #alias hilite='/usr/bin/src-hilite-lesspipe.sh'
-#alias less='less -R'
-#alias lg='lazygit'
+alias less='less -R'
+alias lg='lazygit'
 alias rm='trash'
 alias lzd='lazydocker'
+# ディレクトリ名でしぼってcd
+alias pcd='cd "$(find . -type d | peco)"'
+# ブランチ名で絞ってgit checkout
+alias pgco='git branch --sort=-authordate | cut -b 3- | perl -pe '\''s#^remotes/origin/###'\'' | perl -nlE '\''say if !$c{$_}++'\'' | grep -v -- "->" | peco | xargs git checkout'
+# ブランチ名で絞ってgit branch -d
+alias pgbd='git br | peco | xargs git br -d'
+# ブランチ名で絞ってgit rebase
+alias pgrb='git br | peco | xargs git rebase'
+
 
 if [ -e /usr/local/share/zsh-completions ]; then
     fpath=(/usr/local/share/zsh-completions $fpath)
